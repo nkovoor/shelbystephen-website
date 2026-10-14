@@ -19,7 +19,7 @@ if (window.Lenis && !reduceMotion) {
   (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(0);
 }
 
-// Wheel over the projects section scrolls the rail sideways; at either end the page scrolls again
+// Wheel over a project thumbnail scrolls the rail sideways; at either end the page scrolls again
 (function () {
   var section = document.getElementById('work');
   var rail = section && section.querySelector('.rail');
@@ -39,7 +39,7 @@ if (window.Lenis && !reduceMotion) {
   }
 
   section.addEventListener('wheel', function (e) {
-    if (e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY) || max() <= 0) return;
+    if (!e.target.closest('.thumb') || e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY) || max() <= 0) return;
     var now = performance.now();
     if (!running) target = rail.scrollLeft;
     var atEnd = target >= max() - 1, atStart = target <= 1;
