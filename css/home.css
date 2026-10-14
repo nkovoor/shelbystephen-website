@@ -1,73 +1,27 @@
 /* Home page only */
-.home-nav{position:fixed;left:0;right:0;top:0;background:transparent;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
-.home-nav .logo,.home-nav nav a{color:#fff}
-.home-nav.scrolled{background:rgba(255,255,255,.96);border-bottom-color:var(--line);backdrop-filter:blur(8px)}
-.home-nav.scrolled nav a{color:var(--ink)}
-.home-nav.scrolled .logo{color:var(--red)}
 .wrap{max-width:1100px;margin:0 auto;padding:0 32px}
-.eyebrow{margin:0 0 6px;color:var(--red);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
 
-/* 1. hero (photo placeholder) */
-.hero{height:100vh;height:100svh;min-height:520px;background:#14060a;display:grid;place-items:center}
-.hero-placeholder{color:#c9a3a8;text-align:center;border:2px dashed #5a2a31;border-radius:16px;padding:40px 56px;font-weight:500}
-.hero-placeholder small{display:block;margin-top:6px;opacity:.7}
+/* Screens 1 and 2: empty placeholders, to be coded separately */
+.screen{min-height:calc(100vh - 70px);min-height:calc(100svh - 70px);display:grid;gap:16px;place-content:center;padding:32px;background:#f6f4f0;border-bottom:1px solid var(--line)}
+.slot{border:2px dashed #cfc9bf;border-radius:12px;padding:32px 48px;text-align:center;color:var(--muted)}
 
-/* 2. name poster */
-.poster{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;color:#fff;
-  background:linear-gradient(180deg,#5c0415 0%,#9b0a1e 55%,#c0121f 100%);display:flex;flex-direction:column;justify-content:flex-end}
-.poster-name{position:absolute;inset:8% 0 auto 0;margin:0;text-align:center;font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;
-  font-size:clamp(5.5rem,22vw,19rem);line-height:.86;letter-spacing:.01em;color:transparent;-webkit-text-stroke:3px var(--gold)}
-.poster-name span{display:block}
-.poster-figure{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(38vw,430px);min-width:230px;height:auto;z-index:2}
-.poster-copy{position:relative;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;padding:0 5vw 56px;max-width:1300px;width:100%;margin:0 auto}
-.desc-right{text-align:right;justify-self:end;max-width:380px}
-.tagline{font-family:"Bodoni Moda",serif;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.15;margin:0 0 8px}
-.roles{margin:0;color:var(--gold);font-weight:500;letter-spacing:.04em}
-.desc-right p{margin:0 0 18px}
-.cta{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem}
-.btn-gold{background:var(--gold);color:#2a070d}
-.btn-line{border:2px solid #fff;color:#fff}
-
-/* 3. videos */
-.work{padding:96px 0 72px;background:#fff}
-.work h2,.reviews h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:28px}
+/* Projects */
+.work{padding:80px 0 72px}
+.work h2{font-size:clamp(2rem,4vw,3rem)}
+.work-intro{margin:8px 0 28px;color:var(--muted)}
 .rail{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px max(32px,calc((100vw - 1100px)/2)) 24px;scrollbar-width:thin}
-.vcard{flex:none;width:min(78vw,440px);scroll-snap-align:start;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;gap:4px}
-.vcard .thumb{position:relative;display:block;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#1c0a0f;margin-bottom:8px}
-.vcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
-.vcard:hover img{transform:scale(1.04)}
-.vcard strong{font-family:"Bodoni Moda",serif;font-size:1.3rem}
-.vcard span{color:var(--muted);font-size:.95rem}
-.vcard .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(155,10,30,.92)}
-.vcard .play::after{content:"";position:absolute;left:25px;top:20px;border-left:18px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent}
-.vcard.soon .thumb{display:grid;place-items:center;border:2px dashed var(--line);background:#faf7f2}
-.vcard.soon em{font-style:normal;color:var(--muted)}
-
-/* 4. reviews: slightly tilted, mostly horizontal */
-.reviews{padding:72px 0 120px;background:#faf7f2;overflow:hidden}
-.reviews-tilt{display:flex;flex-direction:column;gap:20px;transform:rotate(-3deg) scale(1.06);margin-top:12px}
-.reviews-row{display:flex;gap:20px;width:max-content;animation:reviews-scroll 55s linear infinite}
-.reviews-row.reverse{animation-direction:reverse;animation-duration:65s}
-.reviews:hover .reviews-row{animation-play-state:paused}
-.review-card{width:340px;flex:none;padding:24px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06);display:flex;flex-direction:column;justify-content:space-between;min-height:170px}
-.review-card p{margin:0 0 16px;font-size:1.05rem}
-.review-card footer{display:flex;flex-direction:column;font-size:.9rem;color:var(--muted)}
-.review-card footer strong{color:var(--ink)}
-@keyframes reviews-scroll{to{transform:translateX(-50%)}}
+.vcard{flex:none;width:min(78vw,420px);scroll-snap-align:start;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;gap:6px}
+.vcard .thumb{display:block;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#e9e5de;margin-bottom:6px}
+.vcard img{width:100%;height:100%;object-fit:cover;display:block}
+.vtitle{font-family:"Bodoni Moda",serif;font-size:1.3rem}
+.vmeta,.vdesc{color:var(--muted);font-size:.95rem}
+.vlink{color:var(--red);font-weight:700;font-size:.95rem;margin-top:2px}
+a.vcard:hover .vlink{text-decoration:underline}
+.vcard.empty .thumb{display:grid;place-items:center;border:2px dashed #cfc9bf;background:transparent}
+.vcard.empty em{font-style:normal;color:var(--muted)}
 
 @media (max-width:760px){
-  .poster-copy{grid-template-columns:1fr;gap:20px;padding-bottom:40px}
-  .desc-right{text-align:left;justify-self:start}
-  .cta{justify-content:flex-start}
-  .poster-name{-webkit-text-stroke-width:2px;inset:14% 0 auto 0}
-  .poster-figure{width:62vw}
   .wrap{padding:0 16px}
   .rail{padding-left:16px;padding-right:16px}
-  .review-card{width:260px}
-  .reviews-row{animation-duration:38s}
-}
-@media (prefers-reduced-motion:reduce){
-  .reviews-row{animation:none;width:auto;overflow-x:auto}
-  .vcard img{transition:none}
+  .screen{padding:16px}
 }
