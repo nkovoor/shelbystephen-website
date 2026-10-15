@@ -1,5 +1,15 @@
 // Shelby Stephen site scripts
 
+// Keep --nav-h in sync with the real navbar height (it wraps to two rows on phones)
+(function () {
+  var nav = document.querySelector('.nav');
+  if (!nav) return;
+  function set() { document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px'); }
+  set();
+  window.addEventListener('resize', set);
+  if (window.ResizeObserver) new ResizeObserver(set).observe(nav);
+})();
+
 // Hide the right-edge fade once the project rail is scrolled to the end
 document.querySelectorAll('.rail-wrap').forEach(function (wrap) {
   var rail = wrap.querySelector('.rail');
