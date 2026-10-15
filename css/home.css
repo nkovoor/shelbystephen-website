@@ -11,7 +11,7 @@
 .hero img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center bottom}
 @media (max-width:760px){.hero{min-height:0;aspect-ratio:1599/899}}
 .work .wrap{text-align:left}
-.work h2{font-size:clamp(2.5rem,5vw,3.75rem);line-height:1.1;text-align:left}
+.work h2{font-family:"Lemon Milk","Bodoni Moda",serif;font-size:clamp(2.5rem,5vw,3.75rem);line-height:1.1;text-align:left}
 .work-intro{margin:12px 0 40px;color:var(--muted);font-size:1.05rem}
 .rail-wrap{position:relative}
 .rail-wrap::after{content:"";position:absolute;top:0;right:0;bottom:0;width:96px;pointer-events:none;background:linear-gradient(to right,rgba(31,42,68,0),var(--bg));transition:opacity .3s}
@@ -24,7 +24,7 @@
 .vcard .thumb{display:block;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:var(--bg-soft);margin-bottom:8px}
 .vcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 a.vcard:hover img,a.vcard:focus-visible img{transform:scale(1.05)}
-.vtitle{font-family:"Bodoni Moda",serif;font-weight:700;font-size:1.4rem;line-height:1.25}
+.vtitle{font-family:"Lemon Milk","Bodoni Moda",serif;font-weight:700;font-size:1.15rem;line-height:1.3}
 .vmeta{color:var(--muted);font-size:.85rem;letter-spacing:.02em}
 .vdesc{color:var(--muted);font-size:.95rem;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(1.55em * 2)}
 .vlink{color:var(--accent);font-weight:700;font-size:.95rem;margin-top:4px}
