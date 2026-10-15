@@ -2,31 +2,31 @@
 .wrap{max-width:1100px;margin:0 auto;padding:0 32px}
 
 /* Screens 1 and 2: empty placeholders, to be coded separately */
-.screen{min-height:calc(100vh - 70px);min-height:calc(100svh - 70px);display:grid;gap:16px;place-content:center;padding:32px;background:#f6f4f0;border-bottom:1px solid var(--line)}
-.slot{border:2px dashed #cfc9bf;border-radius:12px;padding:32px 48px;text-align:center;color:var(--muted)}
+.screen{min-height:calc(100vh - 70px);min-height:calc(100svh - 70px);display:grid;gap:16px;place-content:center;padding:32px;background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.slot{border:2px dashed var(--line);border-radius:12px;padding:32px 48px;text-align:center;color:var(--muted)}
 
 /* Projects */
-.work{padding:96px 0 88px;background:#fff}
+.work{padding:96px 0 88px;background:var(--bg)}
 .work .wrap{text-align:left}
 .work h2{font-size:clamp(2.5rem,5vw,3.75rem);line-height:1.1;text-align:left}
 .work-intro{margin:12px 0 40px;color:var(--muted);font-size:1.05rem}
 .rail-wrap{position:relative}
-.rail-wrap::after{content:"";position:absolute;top:0;right:0;bottom:0;width:96px;pointer-events:none;background:linear-gradient(to right,rgba(255,255,255,0),#fff);transition:opacity .3s}
+.rail-wrap::after{content:"";position:absolute;top:0;right:0;bottom:0;width:96px;pointer-events:none;background:linear-gradient(to right,rgba(31,42,68,0),var(--bg));transition:opacity .3s}
 .rail-wrap.at-end::after{opacity:0}
 .rail{display:flex;gap:32px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:max(32px,calc((100vw - 1100px)/2));padding:4px max(32px,calc((100vw - 1100px)/2)) 24px;scrollbar-width:none;-ms-overflow-style:none}
 .rail::-webkit-scrollbar{display:none}
-.rail:focus-visible{outline:2px solid var(--red);outline-offset:-2px;border-radius:12px}
+.rail:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:12px}
 .vcard{flex:none;width:min(78vw,420px);scroll-snap-align:start;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;gap:8px;border-radius:12px}
-.vcard:focus-visible{outline:3px solid var(--red);outline-offset:6px}
-.vcard .thumb{display:block;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#e9e5de;margin-bottom:8px}
+.vcard:focus-visible{outline:3px solid var(--accent);outline-offset:6px}
+.vcard .thumb{display:block;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:var(--bg-soft);margin-bottom:8px}
 .vcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 a.vcard:hover img,a.vcard:focus-visible img{transform:scale(1.05)}
 .vtitle{font-family:"Bodoni Moda",serif;font-weight:700;font-size:1.4rem;line-height:1.25}
 .vmeta{color:var(--muted);font-size:.85rem;letter-spacing:.02em}
 .vdesc{color:var(--muted);font-size:.95rem;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(1.55em * 2)}
-.vlink{color:var(--red);font-weight:700;font-size:.95rem;margin-top:4px}
+.vlink{color:var(--accent);font-weight:700;font-size:.95rem;margin-top:4px}
 a.vcard:hover .vlink,a.vcard:focus-visible .vlink{text-decoration:underline;text-underline-offset:4px}
-.vcard.empty .thumb{display:grid;place-items:center;border:2px dashed #cfc9bf;background:transparent}
+.vcard.empty .thumb{display:grid;place-items:center;border:2px dashed var(--line);background:transparent}
 .vcard.empty em{font-style:normal;color:var(--muted)}
 @media (hover:hover){.rail{scroll-snap-type:none}}
 @media (prefers-reduced-motion:reduce){
