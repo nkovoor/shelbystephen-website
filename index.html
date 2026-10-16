@@ -18,8 +18,10 @@
   <main>
     <!-- SCREEN 1: full-screen hero photo. -->
     <section class="screen hero" id="hero">
-      <!-- TODO: portrait phone version. Wrap this img in <picture> and add <source media="(max-width: 760px)" srcset="images/hero-mobile.jpg"> above it. -->
-      <img src="images/hero-desktop.png" alt="Shelby Stephen" width="1920" height="1080" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 760px)" srcset="images/portrait.png" width="1080" height="1351">
+        <img src="images/hero-desktop.png" alt="Shelby Stephen" width="1920" height="1080" fetchpriority="high">
+      </picture>
     </section>
 
     <!-- SCREEN 2: picture, headline, tagline, description. Coded separately. -->
