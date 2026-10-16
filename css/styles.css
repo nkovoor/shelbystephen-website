@@ -1,5 +1,5 @@
-@font-face{font-family:"Lemon Milk";font-weight:400;font-display:swap;src:url("../fonts/LemonMilk-Regular.woff2") format("woff2"),url("../fonts/LemonMilk-Regular.otf") format("opentype")}
-@font-face{font-family:"Lemon Milk";font-weight:700;font-display:swap;src:url("../fonts/LemonMilk-Medium.woff2") format("woff2"),url("../fonts/LemonMilk-Medium.otf") format("opentype")}
+@font-face{font-family:"Lemon Milk";font-weight:400;font-display:swap;src:url("../fonts/LemonMilk-Regular.otf") format("opentype")}
+@font-face{font-family:"Lemon Milk";font-weight:700;font-display:swap;src:url("../fonts/LemonMilk-Medium.otf") format("opentype")}
 :root{--bg:#1F2A44;--bg-soft:#26335a;--ink:#E8DCC8;--muted:rgba(232,220,200,0.7);--line:rgba(232,220,200,0.2);--accent:#C9A24B}
 *{box-sizing:border-box}
 body{margin:0;font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
